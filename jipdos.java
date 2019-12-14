@@ -32,7 +32,7 @@ class Mainsoc implements Runnable{
     }
 }
 
-public class socdos{
+public class jipdos{
     public static String osplatform = System.getProperty("os.name").toLowerCase();
 
     public static void clearSystem(){

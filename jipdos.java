@@ -62,7 +62,7 @@ public class socdos{
                 th.start();
             }
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-            System.out.println("\u001B[34m Usage: java socdos [You're Target's IP] [You're Target's Port] [Number Of connections] \u001B[0m");
+            System.out.println("\u001B[34m Usage: java jipdos [You're Target's IP] [You're Target's Port] [Number Of connections] \u001B[0m");
         }
 
     }

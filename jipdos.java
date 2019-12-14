@@ -39,6 +39,10 @@ public class jipdos{
         try {
             if (osWindows()){
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            }else if (osLinux()){
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
+            }else if (osMac()){
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
             }
         }catch(InterruptedException e){
             e.getStackTrace();
@@ -68,7 +72,6 @@ public class jipdos{
     }
 
     public static boolean osWindows(){return osplatform.contains("windows")| osplatform.contains("win");}
-    //public static boolean osLinux(){return osplatform.contains("linux")| osplatform.contains("unix");}
-    //public static boolean osMac(){return osplatform.contains("mac");}
-    //public static boolean osSolaris(){return osplatform.contains("solaris");}
+    public static boolean osLinux(){return osplatform.contains("linux")| osplatform.contains("unix");}
+    public static boolean osMac(){return osplatform.contains("mac");}
 }

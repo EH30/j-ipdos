@@ -55,6 +55,7 @@ public class jipdos{
     public static void main(String[] args) {
         clearSystem();
 
+        System.out.println("\u001B[32m [+]Launched Script \u001B[0m");
         try {
             
             for (int x=0; x< Integer.parseInt(args[2]); x++){
@@ -66,7 +67,7 @@ public class jipdos{
                 th.start();
             }
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-            System.out.println("\u001B[34m Usage: java jipdos [You're Target's IP] [You're Target's Port] [Number Of connections] \u001B[0m");
+            System.out.println("Usage: java jipdos [You're Target's IP] [You're Target's Port] [Number Of connections] ");
         }
 
     }

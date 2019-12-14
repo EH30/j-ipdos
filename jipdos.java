@@ -24,7 +24,7 @@ class Mainsoc implements Runnable{
             }catch(java.net.SocketException e){
                 System.out.println("\u001B[34m Error From Socket \u001B[0m");
             }catch (UnknownHostException e){
-                System.out.println("\u001B{34 [-]Unknown Host Error \u001B[0m");
+                System.out.println("\u001B{34m [-]Unknown Host Error \u001B[0m");
             }catch (IOException e) {
                 System.out.println(e);
             }

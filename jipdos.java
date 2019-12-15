@@ -3,20 +3,25 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.io.DataOutputStream;
 import java.io.IOException;
-
+import java.util.Random;
 
 class Mainsoc implements Runnable{
     public String ip;
     public int port;
     public int connection;
-    
+
+    public static String messages(){
+        String[] msg = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "A", "B", "C","D", "E", "F", "G", "H", "I"};
+        Random rand_choice = new Random();
+        return msg[rand_choice.nextInt(msg.length)];
+    }
 
     public void run(){
         for (int x=0; x< connection; x++){
             try {
                 Socket soc = new Socket(ip, port);
                 DataOutputStream out = new DataOutputStream(soc.getOutputStream());
-                out.writeUTF("EH");
+                out.writeUTF(messages());
                 out.flush();
 
             }catch(java.net.ConnectException e){
